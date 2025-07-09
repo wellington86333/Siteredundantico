@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Aleatoriamente Redundantico - Crie Vídeos Virais com IA</title>
-  <meta name="description" content="Tudo sobre Google Veo 3, vídeos virais com IA, monetização, dicas e cursos recomendados.">
+  <meta name="description" content="Tudo sobre Google Veo 3, vídeos virais com IA, monetização, dicas, tendências e cursos recomendados.">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -29,12 +29,39 @@
       50% {background-position:100% 50%;}
       100% {background-position:0% 50%;}
     }
-    button:hover {
-      animation: pulse 1.5s infinite;
+    button.cta-btn {
+      background: linear-gradient(90deg, #e94c4c 0%, #f87171 100%);
+      color: #fff;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 999px;
+      font-size: 1.25rem;
+      font-weight: bold;
+      box-shadow: 0 4px 20px rgba(233,76,76,0.15);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin: 0.5rem;
+      outline: none;
     }
-    @keyframes pulse {
-      0%, 100% {opacity: 1;}
-      50% {opacity: 0.7;}
+    button.cta-btn:hover, a.cta-btn:hover {
+      transform: scale(1.07);
+      box-shadow: 0 8px 32px rgba(233,76,76,0.25);
+      background: linear-gradient(90deg, #f87171 0%, #e94c4c 100%);
+    }
+    a.cta-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #e94c4c 0%, #f87171 100%);
+      color: #fff !important;
+      padding: 1rem 2rem;
+      border-radius: 999px;
+      font-size: 1.25rem;
+      font-weight: bold;
+      box-shadow: 0 4px 20px rgba(233,76,76,0.15);
+      text-decoration: none;
+      margin: 0.5rem;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
     }
     .fade-in {
       opacity: 0;
@@ -44,6 +71,37 @@
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
+    }
+    .img-ai {
+      border-radius: 1rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      margin: 2rem auto;
+      display: block;
+      max-width: 100%;
+      width: 420px;
+      transition: transform 0.3s;
+    }
+    .img-ai:hover {
+      transform: scale(1.03) rotate(-1deg);
+      box-shadow: 0 8px 36px rgba(233,76,76,0.18);
+    }
+    .img-caption {
+      text-align: center;
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      margin-top: -1.5rem;
+    }
+    .img-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 700px) {
+      .img-row { flex-direction: column; align-items: center; }
+      .img-ai { width: 100%; }
     }
     footer {
       font-style: italic;
@@ -72,10 +130,49 @@
   </header>
 
   <main>
+    <!-- Tendências em Destaque 2025 -->
+    <section class="py-20 bg-gradient-to-br from-yellow-50 to-pink-100 fade-in" id="tendencias">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-8">Tendências de Web Design para 2025</h2>
+        <div class="mb-6">
+          <a href="#cursos" class="cta-btn">Quero Aprender IA Viral!</a>
+          <a href="#tendencias" class="cta-btn">Ver Tendências de 2025</a>
+        </div>
+        <div class="img-row">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=420&q=80" alt="IA Criativa em ação" class="img-ai" />
+          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=420&q=80" alt="Interação entre humanos e IA" class="img-ai" />
+        </div>
+        <div class="img-caption">Imagens inspiradoras sobre criatividade, interação e design com inteligência artificial.</div>
+        <ul class="list-disc pl-6 space-y-4 text-lg text-gray-800 text-left mx-auto max-w-2xl">
+          <li><b>Cabeçalhos de página inteira:</b> Seções hero ocupando toda a tela inicial, com imagem marcante, pouco texto e CTA destacado.</li>
+          <li><b>Design mobile-first:</b> Layouts que priorizam a experiência em dispositivos móveis, essenciais para SEO e público moderno.</li>
+          <li><b>Web design sustentável:</b> Otimização de imagens e recursos para sites mais leves e ecológicos.</li>
+          <li><b>Acessibilidade e inclusão:</b> Alto contraste, textos alternativos em imagens e navegação clara para todos.</li>
+          <li><b>Inteligência artificial no design:</b> IA para geração de conteúdo, imagens, suporte ao usuário e personalização.</li>
+          <li><b>Colaboração em tempo real:</b> Ferramentas que permitem edição simultânea por vários usuários.</li>
+          <li><b>Grades e layouts de duas colunas:</b> Estruturas dinâmicas e modernas para melhor organização visual.</li>
+          <li><b>Minimalismo moderno:</b> Design limpo, poucos elementos e tipografia criativa.</li>
+          <li><b>Cursores animados:</b> Cursores personalizados e animados para interatividade.</li>
+          <li><b>Animações funcionais:</b> Microinterações e animações que reforçam usabilidade e imersão.</li>
+          <li><b>Ilustrações e visualização de dados:</b> Gráficos e ilustrações personalizadas para explicar conceitos.</li>
+          <li><b>Gradientes e fundos dinâmicos:</b> Profundidade e movimento com gradientes e fundos animados.</li>
+          <li><b>Texturas de vidro (glassmorphism):</b> Efeito de vidro fosco em caixas e menus para leveza visual.</li>
+          <li><b>Parallax e rolagem horizontal:</b> Experiências imersivas com efeitos de profundidade e rolagem diferenciada.</li>
+          <li><b>Tipografia criativa:</b> Fontes ousadas e layouts inovadores de texto.</li>
+          <li><b>Microinterações:</b> Pequenas animações e feedbacks visuais em botões, formulários e menus.</li>
+        </ul>
+        <p class="mt-8 text-center text-gray-700">
+          Essas tendências garantem sites modernos, responsivos e com alto poder de engajamento em 2025.
+        </p>
+      </div>
+    </section>
+
     <!-- Dicas Avançadas sobre Veo 3 -->
     <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 fade-in">
       <div class="max-w-4xl mx-auto px-4">
         <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-8">Dicas Avançadas para Dominar o Google Veo 3</h2>
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=420&q=80" alt="Prompt criativo para IA" class="img-ai" />
+        <div class="img-caption">Exemplo de prompt visual para inspirar criações com IA.</div>
         <ul class="list-disc pl-6 space-y-4 text-lg text-gray-800">
           <li><b>Crie prompts cinematográficos detalhados:</b> Descreva cenário, luz, ângulo, emoções e referências visuais para resultados impressionantes.</li>
           <li><b>Construa narrativas em sequência:</b> Gere múltiplos clipes e edite-os para criar histórias completas e coesas.</li>
@@ -95,9 +192,22 @@
     </section>
 
     <!-- Cursos de Inteligência Artificial Recomendados -->
-    <section class="py-20 bg-white fade-in">
+    <section class="py-20 bg-white fade-in" id="cursos">
       <div class="max-w-4xl mx-auto px-4">
         <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-8">Cursos de Inteligência Artificial Recomendados</h2>
+        <div class="mb-6 text-center">
+          <a href="https://pay.kiwify.com.br/LFcTS20?afid=LYPbNr4y" target="_blank" class="cta-btn">Mentoria em IA</a>
+          <a href="https://pay.kiwify.com.br/OUx0Hgb?afid=AhbmEuBA" target="_blank" class="cta-btn">IA: O Novo Ouro</a>
+          <a href="https://pay.kiwify.com.br/DkPxqSY?afid=D4dvNpuX" target="_blank" class="cta-btn">IA para Iniciantes</a>
+          <a href="https://pay.kiwify.com.br/Pc3HCz8?afid=D4dvNpuX" target="_blank" class="cta-btn">IA para Negócios</a>
+          <a href="https://pay.kiwify.com.br/jodzSxD?afid=D4dvNpuX" target="_blank" class="cta-btn">Ferramentas Práticas</a>
+          <a href="https://kiwify.app/u8PIMQi?afid=D4dvNpuX" target="_blank" class="cta-btn">Clube IA</a>
+        </div>
+        <div class="img-row">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=420&q=80" alt="Aprendizado em IA" class="img-ai" />
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=420&q=80" alt="Comunidade de IA" class="img-ai" />
+        </div>
+        <div class="img-caption">Aprenda IA de forma prática e conecte-se com uma comunidade de criadores.</div>
         <div class="space-y-8">
           <div class="bg-gray-50 p-6 rounded-lg shadow card-hover">
             <a href="https://pay.kiwify.com.br/LFcTS20?afid=LYPbNr4y" target="_blank" class="text-xl font-bold text-red-600 hover:underline">Mentoria em Inteligência Artificial</a>
@@ -127,11 +237,13 @@
       </div>
     </section>
 
-    <!-- Seção "Sobre o Site" substituindo o e-mail chamativo -->
+    <!-- Sobre o Site -->
     <section class="py-20 bg-gray-50 fade-in">
       <div class="max-w-2xl mx-auto px-4">
         <h2 class="text-2xl font-extrabold mb-4 text-center">Sobre o Site Aleatoriamente Redundantico</h2>
         <div class="bg-white rounded-lg shadow p-6">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=420&q=80" alt="Equipe criativa e IA" class="img-ai" />
+          <div class="img-caption">Aleatoriamente Redundantico: criatividade, IA e comunidade.</div>
           <p class="mb-4 text-gray-800">
             O <strong>Aleatoriamente Redundantico</strong> nasceu para compartilhar estratégias, dicas práticas e oportunidades sobre como a inteligência artificial pode revolucionar a criação de vídeos virais, monetização digital e desenvolvimento de habilidades criativas.
           </p>
@@ -197,7 +309,7 @@
     window.addEventListener('load', fadeInOnScroll);
 
     // Efeito pulse ao clicar em botões
-    const buttons = document.querySelectorAll('button');
+    const buttons = document.querySelectorAll('button, a.cta-btn');
     buttons.forEach(btn => {
       btn.addEventListener('mousedown', () => {
         btn.style.transform = 'scale(0.95)';
