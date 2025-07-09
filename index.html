@@ -4,631 +4,210 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Aleatoriamente Redundantico - Crie Vídeos Virais com IA</title>
-  <meta name="description" content="Domine a criação de vídeos virais com Google Veo 3 e monetize suas habilidades. Aprenda a fórmula Preparação + Subversão = Surpresa para conteúdo viral.">
-  
-  <!-- Google Fonts: Inter -->
+  <meta name="description" content="Tudo sobre Google Veo 3, vídeos virais com IA, monetização, dicas e cursos recomendados.">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Favicon -->
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  
-  <!-- Open Graph Tags -->
-  <meta property="og:title" content="Aleatoriamente Redundantico - Crie Vídeos Virais com IA">
-  <meta property="og:description" content="Domine a criação de vídeos virais com Google Veo 3 e monetize suas habilidades.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://seudominio.com">
-  <meta property="og:image" content="https://seudominio.com/assets/og-image.jpg">
-  
-  <!-- Estilos personalizados -->
   <style>
-    :root {
-      --primary: #e94c4c;
-      --secondary: #2563eb;
-      --accent: #10b981;
-      --dark: #1f2937;
-      --light: #f8fafc;
-    }
-    
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-    }
-    
-    .gradient-bg {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    }
-    
-    .card-hover {
-      transition: all 0.3s ease;
-    }
-    
-    .card-hover:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    }
-    
+    :root { --primary: #e94c4c; }
+    body { font-family: 'Inter', sans-serif; }
+    .card-hover { transition: all 0.3s; }
+    .card-hover:hover { transform: scale(1.05); box-shadow: 0 20px 40px rgba(233, 76, 76, 0.4);}
     .loading-spinner {
-      border: 2px solid #f3f3f3;
-      border-top: 2px solid var(--primary);
-      border-radius: 50%;
-      width: 20px;
-      height: 20px;
+      border: 2px solid #f3f3f3; border-top: 2px solid var(--primary);
+      border-radius: 50%; width: 20px; height: 20px;
       animation: spin 1s linear infinite;
     }
-    
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    @keyframes spin { 0% { transform: rotate(0deg);} 100% { transform: rotate(360deg);} }
+    header {
+      background: linear-gradient(270deg, #e94c4c, #f87171, #e94c4c);
+      background-size: 600% 600%;
+      animation: gradientBG 15s ease infinite;
     }
-    
-    .pulse-animation {
-      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    @keyframes gradientBG {
+      0% {background-position:0% 50%;}
+      50% {background-position:100% 50%;}
+      100% {background-position:0% 50%;}
     }
-    
+    button:hover {
+      animation: pulse 1.5s infinite;
+    }
     @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
+      0%, 100% {opacity: 1;}
+      50% {opacity: 0.7;}
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    footer {
+      font-style: italic;
+      letter-spacing: 0.05em;
     }
   </style>
 </head>
-
 <body class="bg-gray-50 text-gray-900 antialiased">
+
   <!-- Header -->
   <header class="bg-white shadow-sm sticky top-0 z-50 backdrop-blur-sm bg-white/90">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <!-- Logo -->
-        <div class="flex items-center space-x-3">
-          <svg class="h-8 w-8 text-red-500" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10 2L3 7v11h4v-6h6v6h4V7l-7-5z"/>
-          </svg>
-          <div>
-            <h1 class="text-xl font-bold text-gray-900">Aleatoriamente Redundantico</h1>
-            <p class="text-sm text-gray-600">Crie Vídeos Virais com IA e Monetize Suas Habilidades</p>
-          </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <div class="flex items-center space-x-3">
+        <svg class="h-8 w-8 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2L3 7v11h4v-6h6v6h4V7l-7-5z"/></svg>
+        <div>
+          <h1 class="text-xl font-bold text-gray-900">Aleatoriamente Redundantico</h1>
+          <p class="text-sm text-gray-600">Crie Vídeos Virais com IA e Monetize Suas Habilidades</p>
         </div>
-        
-        <!-- YouTube Link -->
-        <a href="https://youtube.com/@AleatoriamenteRedundantico" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           class="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">
-          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10 2.3C5.5 2.3 2 5.8 2 10.3s3.5 8 8 8 8-3.5 8-8-3.5-8-8-8zm3.5 8.7l-4.5 2.6c-.1 0-.2 0-.2-.1V7.8c0-.1.1-.1.2-.1L13.5 10c.1 0 .1.1 0 .1z"/>
-          </svg>
-          Canal YouTube
-        </a>
       </div>
+      <a href="https://youtube.com/@AleatoriamenteRedundantico" target="_blank" rel="noopener noreferrer"
+         class="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">
+        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2.3C5.5 2.3 2 5.8 2 10.3s3.5 8 8 8 8-3.5 8-8-3.5-8-8-8zm3.5 8.7l-4.5 2.6c-.1 0-.2 0-.2-.1V7.8c0-.1.1-.1.2-.1L13.5 10c.1 0 .1.1 0 .1z"/></svg>
+        Canal YouTube
+      </a>
     </div>
   </header>
 
-  <!-- Main Content -->
   <main>
-    <!-- Introdução: O Fenômeno dos Vídeos Virais com IA -->
-    <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
-            Introdução: O Fenômeno dos Vídeos Virais com IA
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            O Google Veo 3 revolucionou a produção de vídeos, tornando possível criar conteúdo cinematográfico 
-            de qualidade profissional por uma fração dos custos tradicionais[1]. Descubra como a psicologia da 
-            viralização aliada à IA pode disparar o engajamento e transformar sua audiência.
-          </p>
-        </div>
-        
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="space-y-6">
-            <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">🚀 Poder da IA na Criação</h3>
-              <p class="text-gray-600">
-                Com o Veo 3, você pode criar vídeos que anteriormente custavam US$ 500.000 por apenas 
-                alguns dólares e em menos de um dia[1]. A democratização da produção cinematográfica 
-                chegou ao seu ápice.
-              </p>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">🧠 Psicologia da Viralização</h3>
-              <p class="text-gray-600">
-                A verdadeira arte não está apenas na técnica, mas em entender profundamente 
-                a psicologia do público e como criar momentos que disparam dopamina[1].
-              </p>
-            </div>
+    <!-- Dicas Avançadas sobre Veo 3 -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 fade-in">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-8">Dicas Avançadas para Dominar o Google Veo 3</h2>
+        <ul class="list-disc pl-6 space-y-4 text-lg text-gray-800">
+          <li><b>Crie prompts cinematográficos detalhados:</b> Descreva cenário, luz, ângulo, emoções e referências visuais para resultados impressionantes.</li>
+          <li><b>Construa narrativas em sequência:</b> Gere múltiplos clipes e edite-os para criar histórias completas e coesas.</li>
+          <li><b>Aproveite o elemento surpresa:</b> Estabeleça padrões e quebre expectativas para gerar engajamento e compartilhamentos.</li>
+          <li><b>Otimize para plataformas:</b> Exporte nos formatos ideais para Shorts, Reels ou TikTok e adicione legendas automáticas.</li>
+          <li><b>Teste e itere:</b> Gere várias versões, analise métricas e refine seus prompts e roteiros.</li>
+          <li><b>Integre áudio e efeitos:</b> Use trilhas e efeitos sonoros para reforçar emoção e narrativa.</li>
+          <li><b>Use IA como parceira criativa:</b> Brainstorm de ideias, roteiros e prompts com ChatGPT ou outras IAs.</li>
+          <li><b>Monetize com diversidade:</b> Ofereça serviços, crie cursos, produza conteúdo viral e explore diferentes modelos de renda.</li>
+          <li><b>Mantenha-se atualizado:</b> Acompanhe novidades e participe de comunidades para trocar experiências.</li>
+          <li><b>Destaque-se com autenticidade:</b> Sua criatividade é o diferencial em meio ao conteúdo gerado por IA.</li>
+        </ul>
+        <p class="mt-8 text-center text-gray-700">
+          O segredo do sucesso com o Veo 3 está em unir técnica, criatividade e psicologia do público. Surpreenda, emocione e inove — e seus vídeos terão muito mais chances de viralizar.
+        </p>
+      </div>
+    </section>
+
+    <!-- Cursos de Inteligência Artificial Recomendados -->
+    <section class="py-20 bg-white fade-in">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-8">Cursos de Inteligência Artificial Recomendados</h2>
+        <div class="space-y-8">
+          <div class="bg-gray-50 p-6 rounded-lg shadow card-hover">
+            <a href="https://pay.kiwify.com.br/LFcTS20?afid=LYPbNr4y" target="_blank" class="text-xl font-bold text-red-600 hover:underline">Mentoria em Inteligência Artificial</a>
+            <p class="mt-2 text-gray-700">Receba acompanhamento direto de um mentor experiente e acelere sua jornada no universo da IA! Aprenda estratégias de monetização e transforme seu potencial em resultados concretos.</p>
           </div>
-          
-          <div class="relative">
-            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop" 
-                 alt="Inteligência Artificial" 
-                 class="w-full h-96 object-cover rounded-lg shadow-xl">
-            <div class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-lg"></div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow card-hover">
+            <a href="https://pay.kiwify.com.br/OUx0Hgb?afid=AhbmEuBA" target="_blank" class="text-xl font-bold text-red-600 hover:underline">"IA" O Novo Ouro da Internet</a>
+            <p class="mt-2 text-gray-700">Domine as principais ferramentas de IA e aprenda a gerar renda online. Conteúdo direto ao ponto, focado em produtividade, marketing digital e empreendedorismo.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow card-hover">
+            <a href="https://pay.kiwify.com.br/DkPxqSY?afid=D4dvNpuX" target="_blank" class="text-xl font-bold text-red-600 hover:underline">Curso Completo de Inteligência Artificial para Iniciantes</a>
+            <p class="mt-2 text-gray-700">Aprenda do zero os fundamentos da IA, aplicações práticas e como implementar soluções inteligentes em diferentes áreas.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow card-hover">
+            <a href="https://pay.kiwify.com.br/Pc3HCz8?afid=D4dvNpuX" target="_blank" class="text-xl font-bold text-red-600 hover:underline">IA para Negócios e Monetização</a>
+            <p class="mt-2 text-gray-700">Descubra como a IA pode impulsionar negócios, automatizar processos e abrir novas fontes de receita.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow card-hover">
+            <a href="https://pay.kiwify.com.br/jodzSxD?afid=D4dvNpuX" target="_blank" class="text-xl font-bold text-red-600 hover:underline">Ferramentas Práticas de IA para o Dia a Dia</a>
+            <p class="mt-2 text-gray-700">Explore ferramentas de IA que aumentam produtividade e otimizam resultados em trabalhos, estudos e projetos pessoais.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow card-hover">
+            <a href="https://kiwify.app/u8PIMQi?afid=D4dvNpuX" target="_blank" class="text-xl font-bold text-red-600 hover:underline">Clube de Assinatura de Inteligência Artificial</a>
+            <p class="mt-2 text-gray-700">Acesso contínuo a conteúdos exclusivos, tutoriais, desafios mensais e uma comunidade ativa para troca de experiências.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- A Fórmula Viral: Preparação + Subversão = SURPRESA -->
-    <section class="py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
-            A Fórmula Viral: Preparação + Subversão = SURPRESA
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Toda viralização parte de um padrão reconhecível que é quebrado no timing perfeito, 
-            criando dissonância cognitiva e vontade de compartilhar[1].
+    <!-- Seção "Sobre o Site" substituindo o e-mail chamativo -->
+    <section class="py-20 bg-gray-50 fade-in">
+      <div class="max-w-2xl mx-auto px-4">
+        <h2 class="text-2xl font-extrabold mb-4 text-center">Sobre o Site Aleatoriamente Redundantico</h2>
+        <div class="bg-white rounded-lg shadow p-6">
+          <p class="mb-4 text-gray-800">
+            O <strong>Aleatoriamente Redundantico</strong> nasceu para compartilhar estratégias, dicas práticas e oportunidades sobre como a inteligência artificial pode revolucionar a criação de vídeos virais, monetização digital e desenvolvimento de habilidades criativas.
           </p>
-        </div>
-        
-        <div class="grid md:grid-cols-3 gap-8 mb-12">
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg text-center card-hover">
-            <div class="bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Preparação</h3>
-            <p class="text-gray-600">
-              Estabeleça um formato que o público reconheça. Crie expectativas baseadas em 
-              padrões familiares e clichês conhecidos[1].
-            </p>
-          </div>
-          
-          <div class="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-lg text-center card-hover">
-            <div class="bg-red-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Subversão</h3>
-            <p class="text-gray-600">
-              Introduza um elemento inesperado que desafie o padrão. Quebre as expectativas 
-              de forma criativa e surpreendente[1].
-            </p>
-          </div>
-          
-          <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg text-center card-hover">
-            <div class="bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Surpresa</h3>
-            <p class="text-gray-600">
-              Capture atenção, gere dopamina e impulsione compartilhamentos. O cérebro é 
-              sacudido pelo inesperado, criando memórias duradouras[1].
-            </p>
-          </div>
-        </div>
-        
-        <div class="text-center">
-          <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=400&fit=crop" 
-               alt="Vídeo Viral" 
-               class="w-full max-w-4xl mx-auto rounded-lg shadow-xl">
-        </div>
-      </div>
-    </section>
-
-    <!-- Monetize Suas Habilidades com Veo 3 -->
-    <section class="py-20 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
-            Monetize Suas Habilidades com Veo 3
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Do estoque de clipes a anúncios sob demanda, a IA triplica oportunidades de receita 
-            e corta custos de produção em até 80%[1].
+          <ul class="list-disc pl-6 mb-4 text-gray-800">
+            <li>Conteúdo 100% original, atualizado e focado em resultados reais para criadores, empreendedores e curiosos em IA.</li>
+            <li>Guias práticos sobre Google Veo 3, roteiro, edição, marketing e técnicas de engajamento.</li>
+            <li>Indicações de cursos, mentorias e comunidades para acelerar sua jornada no universo da inteligência artificial.</li>
+          </ul>
+          <p class="mb-4 text-gray-800">
+            Se você busca inspiração, aprendizado e as melhores oportunidades para transformar criatividade em renda, este é o seu lugar!
           </p>
-        </div>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
-            <div class="bg-blue-100 p-3 rounded-lg w-fit mb-4">
-              <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-2">Produção de Anúncios para PMEs</h3>
-            <p class="text-gray-600 text-sm">Crie campanhas publicitárias profissionais para pequenas e médias empresas.</p>
+          <div class="text-center mt-6">
+            <a href="mailto:well20sk8.crisping803@passinbox.com" class="text-lg text-red-600 font-bold hover:underline">well20sk8.crisping803@passinbox.com</a><br>
+            <span class="text-gray-700">Lugar tão tão distante, PS/ Passárgada</span>
           </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
-            <div class="bg-green-100 p-3 rounded-lg w-fit mb-4">
-              <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-2">Criação de Cursos Online</h3>
-            <p class="text-gray-600 text-sm">Desenvolva conteúdo educacional e tutoriais com vídeos de alta qualidade.</p>
-          </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
-            <div class="bg-purple-100 p-3 rounded-lg w-fit mb-4">
-              <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"/>
-                <path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd"/>
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-2">Venda de Clipes em Bancos de Vídeo</h3>
-            <p class="text-gray-600 text-sm">Monetize criando conteúdo para plataformas de stock footage.</p>
-          </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
-            <div class="bg-yellow-100 p-3 rounded-lg w-fit mb-4">
-              <svg class="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-2">Parcerias com Agências</h3>
-            <p class="text-gray-600 text-sm">Ofereça consultoria e serviços especializados em vídeos com IA.</p>
-          </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
-            <div class="bg-red-100 p-3 rounded-lg w-fit mb-4">
-              <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-2">Canais "Faceless" YouTube Shorts</h3>
-            <p class="text-gray-600 text-sm">Crie conteúdo viral sem aparecer, focando na narrativa e edição.</p>
-          </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
-            <div class="bg-indigo-100 p-3 rounded-lg w-fit mb-4">
-              <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-2">Séries Narrativas com Product Placement</h3>
-            <p class="text-gray-600 text-sm">Desenvolva narrativas envolventes integrando produtos de forma natural.</p>
-          </div>
-        </div>
-        
-        <div class="text-center">
-          <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=400&fit=crop" 
-               alt="Monetização com IA" 
-               class="w-full max-w-4xl mx-auto rounded-lg shadow-xl">
-        </div>
-      </div>
-    </section>
-
-    <!-- Teoria das Cores para Vídeos Virais -->
-    <section class="py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
-            🎨 Teoria das Cores para Vídeos Virais
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Cores impactam cliques: tons quentes reforçam urgência, frios criam confiança 
-            e contraste alto aumenta CTR em 38%[1].
-          </p>
-        </div>
-        
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="space-y-6">
-            <div class="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-lg border-l-4 border-red-500">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">🔥 Contraste</h3>
-              <p class="text-gray-600">Thumbnails com cores opostas retêm atenção e aumentam significativamente a taxa de cliques.</p>
-            </div>
-            
-            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border-l-4 border-blue-500">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">😊 Faces + Emoção</h3>
-              <p class="text-gray-600">Thumbnails com expressões faciais marcantes geram 20% mais cliques do que imagens neutras.</p>
-            </div>
-            
-            <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg border-l-4 border-purple-500">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">🎯 Consistência Visual</h3>
-              <p class="text-gray-600">Paletas de cores fixas fortalecem o branding e criam reconhecimento instantâneo da marca.</p>
-            </div>
-            
-            <div class="bg-gradient-to-r from-green-50 to-teal-50 p-6 rounded-lg border-l-4 border-green-500">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">🌈 Círculo Cromático</h3>
-              <p class="text-gray-600">Use cores complementares para destacar CTAs e elementos importantes do vídeo.</p>
-            </div>
-          </div>
-          
-          <div class="text-center">
-            <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&h=400&fit=crop" 
-                 alt="Teoria das Cores" 
-                 class="w-full rounded-lg shadow-xl">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gerador de Ideias de Vídeos Virais -->
-    <section class="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-8">
-          <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            ✨ Gerador de Ideias de Vídeos Virais
-          </h3>
-          <p class="text-lg text-gray-600">
-            Insira um assunto ou nicho e nossa IA gerará ganchos que maximizam retenção 
-            usando curiosidade, FOMO e padrão-break[1].
-          </p>
-        </div>
-        
-        <div class="bg-white rounded-lg shadow-xl p-8">
-          <div class="mb-6">
-            <label for="ideaInput" class="block text-sm font-medium text-gray-700 mb-2">
-              Digite seu nicho ou assunto
-            </label>
-            <textarea 
-              id="ideaInput" 
-              rows="4" 
-              placeholder="Ex.: culinária vegana, fintech, educação infantil, marketing digital..."
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
-            ></textarea>
-          </div>
-          
-          <button 
-            id="genIdeaBtn"
-            class="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors flex items-center justify-center"
-          >
-            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
-            </svg>
-            Gerar Ideias Virais
-          </button>
-          
-          <div id="ideaLoader" class="hidden mt-4 text-center">
-            <div class="loading-spinner mx-auto mb-2"></div>
-            <p class="text-gray-600">Gerando ideias criativas...</p>
-          </div>
-          
-          <div id="ideaOutput" class="mt-6 space-y-4"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Otimizador de Títulos e Miniaturas -->
-    <section class="py-20 bg-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-8">
-          <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            ✨ Otimizador de Títulos e Miniaturas
-          </h3>
-          <p class="text-lg text-gray-600">
-            Cole seu título ou descrição e receba sugestões otimizadas com gatilhos de cliques 
-            e estratégias de cores para maximizar o CTR[1].
-          </p>
-        </div>
-        
-        <div class="bg-gray-50 rounded-lg shadow-xl p-8">
-          <div class="mb-6">
-            <label for="titleInput" class="block text-sm font-medium text-gray-700 mb-2">
-              Digite seu título ou descrição
-            </label>
-            <textarea 
-              id="titleInput" 
-              rows="3" 
-              placeholder="Ex.: Como ganhar dinheiro com IA em 2025"
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors"
-            ></textarea>
-          </div>
-          
-          <button 
-            id="optimizeBtn"
-            class="w-full bg-red-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-red-700 transition-colors flex items-center justify-center"
-          >
-            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            Otimizar Título
-          </button>
-          
-          <div id="optLoader" class="hidden mt-4 text-center">
-            <div class="loading-spinner mx-auto mb-2"></div>
-            <p class="text-gray-600">Analisando e otimizando...</p>
-          </div>
-          
-          <div id="optOutput" class="mt-6 space-y-4"></div>
+          <blockquote class="mt-6 italic text-gray-500 border-l-4 pl-4 border-red-400">
+            O futuro pertence a quem une criatividade, tecnologia e ação. Explore, aprenda e compartilhe!
+          </blockquote>
         </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-4 gap-8">
-        <div class="col-span-2">
-          <h3 class="text-2xl font-bold mb-4">Aleatoriamente Redundantico</h3>
-          <p class="text-gray-400 mb-4">
-            Domine a arte de criar vídeos virais com IA e transforme sua criatividade em uma fonte de renda sustentável.
-          </p>
-          <div class="flex space-x-4">
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-              </svg>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
-              </svg>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-        
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Links Úteis</h4>
-          <ul class="space-y-2 text-gray-400">
-            <li><a href="#" class="hover:text-white transition-colors">Tutoriais</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Exemplos</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Recursos</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Suporte</a></li>
-          </ul>
-        </div>
-        
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Contato</h4>
-          <ul class="space-y-2 text-gray-400">
-            <li>contato@aleatoriamente.com</li>
-            <li>+55 (11) 99999-9999</li>
-            <li>São Paulo, SP</li>
-          </ul>
-        </div>
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h3 class="text-xl font-bold mb-2">Aleatoriamente Redundantico</h3>
+      <p class="mb-2">Domine a arte de criar vídeos virais com IA e transforme sua criatividade em uma fonte de renda sustentável.</p>
+      <div class="mb-2">
+        <a href="mailto:well20sk8.crisping803@passinbox.com" class="text-red-400 hover:underline">well20sk8.crisping803@passinbox.com</a> <br>
+        <span>Lugar tão tão distante, PS/ Passárgada</span>
       </div>
-      
-      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-        <p>&copy; 2024 Aleatoriamente Redundantico. Todos os direitos reservados.</p>
+      <div class="border-t border-gray-800 mt-4 pt-4 text-gray-400">
+        &copy; 2025 Aleatoriamente Redundantico. Todos os direitos reservados.
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- Scripts JavaScript (IA, etc.) + Criatividade -->
   <script>
-    // Elementos DOM
-    const ideaBtn = document.getElementById('genIdeaBtn');
-    const ideaInput = document.getElementById('ideaInput');
-    const ideaOutput = document.getElementById('ideaOutput');
-    const ideaLoader = document.getElementById('ideaLoader');
-    
-    const optimizeBtn = document.getElementById('optimizeBtn');
-    const titleInput = document.getElementById('titleInput');
-    const optOutput = document.getElementById('optOutput');
-    const optLoader = document.getElementById('optLoader');
-    
-    // Função para simular chamada de API
-    async function simulateAICall(prompt, type = 'idea') {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      if (type === 'idea') {
-        return {
-          ideas: [
-            `🎯 "${prompt}" + Revelação Chocante: O que ninguém te conta sobre ${prompt}`,
-            `🚀 Fórmula Secreta: Como dominar ${prompt} em 30 dias (método comprovado)`,
-            `💡 Antes vs Depois: Transformação épica usando ${prompt}`,
-            `🔥 Reação Real: Testamos ${prompt} por 7 dias e o resultado foi surpreendente`,
-            `⚡ Hack Viral: ${prompt} que mudou tudo em 2024`
-          ]
-        };
-      } else {
-        return {
-          optimized: [
-            `✨ Título Otimizado: "${prompt}" → "REVELADO: ${prompt} (Método Secreto Funciona!)"`,
-            `🎨 Cor de Thumbnail: Use vermelho + amarelo para urgência máxima`,
-            `😱 Expressão Facial: Rosto surpreso + olhos arregalados aumentam CTR em 40%`,
-            `🔢 Números Específicos: Adicione "7 Passos" ou "30 Dias" para credibilidade`,
-            `🎯 Call-to-Action: "Você não vai acreditar no que aconteceu..."`
-          ]
-        };
-      }
-    }
-    
-    // Gerador de Ideias
-    ideaBtn.addEventListener('click', async () => {
-      const query = ideaInput.value.trim();
-      if (!query) {
-        alert('Por favor, insira um assunto ou nicho');
-        return;
-      }
-      
-      ideaLoader.classList.remove('hidden');
-      ideaOutput.innerHTML = '';
-      ideaBtn.disabled = true;
-      
-      try {
-        const response = await simulateAICall(query, 'idea');
-        
-        ideaOutput.innerHTML = `
-          <div class="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg">
-            <h4 class="text-xl font-bold text-gray-900 mb-4">💡 Ideias Virais Geradas:</h4>
-            <div class="space-y-3">
-              ${response.ideas.map(idea => `
-                <div class="bg-white p-4 rounded-lg border-l-4 border-indigo-500 shadow-sm">
-                  <p class="text-gray-700">${idea}</p>
-                </div>
-              `).join('')}
-            </div>
-          </div>
-        `;
-      } catch (error) {
-        ideaOutput.innerHTML = `
-          <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
-            <p class="text-red-700">Erro ao gerar ideias. Tente novamente.</p>
-          </div>
-        `;
-      } finally {
-        ideaLoader.classList.add('hidden');
-        ideaBtn.disabled = false;
-      }
-    });
-    
-    // Otimizador de Títulos
-    optimizeBtn.addEventListener('click', async () => {
-      const title = titleInput.value.trim();
-      if (!title) {
-        alert('Por favor, insira um título');
-        return;
-      }
-      
-      optLoader.classList.remove('hidden');
-      optOutput.innerHTML = '';
-      optimizeBtn.disabled = true;
-      
-      try {
-        const response = await simulateAICall(title, 'optimize');
-        
-        optOutput.innerHTML = `
-          <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg">
-            <h4 class="text-xl font-bold text-gray-900 mb-4">🚀 Otimizações Sugeridas:</h4>
-            <div class="space-y-3">
-              ${response.optimized.map(opt => `
-                <div class="bg-white p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-                  <p class="text-gray-700">${opt}</p>
-                </div>
-              `).join('')}
-            </div>
-          </div>
-        `;
-      } catch (error) {
-        optOutput.innerHTML = `
-          <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
-            <p class="text-red-700">Erro ao otimizar título. Tente novamente.</p>
-          </div>
-        `;
-      } finally {
-        optLoader.classList.add('hidden');
-        optimizeBtn.disabled = false;
-      }
-    });
-    
-    // Smooth scrolling para links internos
+    // Rolagem suave para links internos
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+      anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
     });
-    
-    // Animação de fade-in para elementos
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-          entry.target.classList.remove('opacity-0', 'translate-y-8');
+
+    // Fade-in animado ao rolar a página
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const fadeInOnScroll = () => {
+      fadeEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('visible');
         }
       });
-    }, observerOptions);
-    
-    // Observar elementos para animação
-    document.querySelectorAll('.card-hover').forEach(card => {
-      card.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-700');
-      observer.observe(card);
+    };
+    window.addEventListener('scroll', fadeInOnScroll);
+    window.addEventListener('load', fadeInOnScroll);
+
+    // Efeito pulse ao clicar em botões
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(btn => {
+      btn.addEventListener('mousedown', () => {
+        btn.style.transform = 'scale(0.95)';
+      });
+      btn.addEventListener('mouseup', () => {
+        btn.style.transform = 'scale(1)';
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'scale(1)';
+      });
     });
   </script>
 </body>
