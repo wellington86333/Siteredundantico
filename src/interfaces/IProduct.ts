@@ -1,6 +1,8 @@
 // Interface Segregation Principle (ISP)
 // Interfaces are focused and specific to their use cases
 
+import { ISubject } from './IObserver';
+
 export interface IProduct {
   readonly id: string;
   readonly name: string;
@@ -11,6 +13,7 @@ export interface IProduct {
 
 export interface ICartItem extends IProduct {
   quantity: number;
+  getTotalPrice(): number;
 }
 
 export interface IProductRepository {
@@ -19,10 +22,11 @@ export interface IProductRepository {
   findByCategory(category: string): Promise<IProduct[]>;
 }
 
-export interface ICartRepository {
+export interface ICartRepository extends ISubject<ICartItem[]> {
   getItems(): ICartItem[];
   addItem(product: IProduct): void;
   removeItem(productId: string): void;
   clear(): void;
   getTotalPrice(): number;
+  getFormattedTotalPrice(): string;
 }
